@@ -1,0 +1,62 @@
+/*Colour Palette is as follows: Colour Palette["#FDF9F3", "#F8EAD5", "#C7B299", "#A67C52", "#282828", "#66140A"]*/
+/*https://coolors.co/fdf9f3-f8ead5-c7b299-a67c52-282828-66140a*/
+div {
+    background-color: #282828;
+    width: 1200px;
+    height: 500px;
+    padding: 100px;
+    margin: 10px;
+    font-family: sans-serif, monospace, ;
+    border: 5px groove #A67C52;
+}
+table, th, td, tr {
+    border: 2px solid #A67C52;
+    border-collapse: collapse;
+    padding: 5px;
+    color: #F8EAD5;
+}
+
+#Heading{
+    color:#FDF9F3; 
+    text-align: center;
+}
+.RaisinBlack{
+    color:#282828;
+    text-align: left;
+}
+.DefaultText{
+    Color:#FDF9F3;
+    text-align: left;
+}
+button{
+    width: 300px;
+    height: 100px;
+    font-size: 24px;
+    background-color: #F8EAD5;
+}
+button:hover{
+    background-color: #A67C52;
+}
+/* Allows for the change in width of screen to change elements about the web design (e.g. if used on phone or something) */
+@media (min-width: 600px){
+    body{
+        background-color: #66140A;
+    }
+}
+@media (max-width: 599px){
+    body{
+        background-color: #F8EAD5;
+    }
+}
+#FlexboxDemo{
+    display: flex;
+    flex-wrap: wrap;
+}
+#FlexboxDemo > div {
+    background-color: #F8EAD5;
+    font-size: large;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+}
