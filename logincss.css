@@ -1,8 +1,36 @@
-#div1{
+body, html {
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    background-color: #fdf9f3;
+    position: relative;
 }
+
+.bodysec {
+    text-align: center;
+    position: relative;
+    padding: 24px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.coolcirle {
+    position: absolute;
+    top: 0px;
+    right: -380px;
+    width: 150px;
+    height: auto;
+}
+
+
+.coolcirle2 {
+    position: absolute;
+    bottom: 0px;
+    left: -380px;
+    width: 150px;
+    height: auto;
+}
+
