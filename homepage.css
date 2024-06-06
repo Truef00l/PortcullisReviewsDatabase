@@ -1,1 +1,106 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: left;  
+    align-items: left; 
+    background-color: #fdf9f3;
+    position: relative;
+    font-family: "Lato", sans-serif;
+}
+
+/* ---------------------------------------------------------------*/
+  
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111111d2;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+    font-size: 18px;
+}
+
+/* ---------------------------------------------------------------*/
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size:20px;
+    margin-left: 50px;
+}
+
+.sidebar .closebtn:hover {
+    font-size: x-large;
+}
+
+/* ---------------------------------------------------------------*/
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #fdf9f3;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: none;
+    margin-right: 0px; /* Add margin to create space between the button and text */
+}
+
+.openbtn:hover span {
+    font-size: 24px;
+}
+
+/* ---------------------------------------------------------------*/
+
+#containerwith-openbutn {
+    transition: margin-left .5s;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------------------------------------------------------------*/
+
+.topbar {
+    display: flex;
+    justify-content: space-between; /* Align items at the start and end */
+    align-items: center; /* Vertically center items */
+    width: 100%; /* Ensure the top bar spans the full width */
+}
+
+.topbar2 {
+    display: flex;
+    justify-content: space-between; /* Align items at the start and end */
+    width: 100%; /* Ensure the top bar spans the full width */
+    margin-top: 25px;
+}
+
+/*-----------------------------------------------------------------*/
+
+.sidebar-tit {
+    margin: 0; /* Reset default margin */
+    margin-left: 470px;
+    text-align: center; /* Center text horizontally */
+}
+
 
