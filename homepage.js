@@ -1,10 +1,11 @@
-
 function openNav() {
     document.getElementById("mySidebar").style.width = "200px";
-    document.getElementById("containerwith-openbutn").style.marginLeft = "200px";
-}
+    document.getElementById("main").style.marginLeft = "200px";
+    document.getElementById("maincontent").style.marginLeft = "200px";
+  }
   
-function closeNav() {
+  function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("containerwith-openbutn").style.marginLeft= "0";
-}
+    document.getElementById("main").style.marginLeft= "0";
+    document.getElementById("maincontent").style.marginLeft= "0";
+  }
