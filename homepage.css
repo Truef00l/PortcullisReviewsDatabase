@@ -75,6 +75,7 @@ body {
     transition: margin-left .5s;
     padding: 16px;
     position: relative;
+    display: inline-block;
 }
 
 .Title {
@@ -104,4 +105,41 @@ body {
     padding-bottom: 16px;
     font-size: larger;
     background-color:#ccc7bf ;
+}
+
+
+
+#box ul, #box ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+}
+#box {
+    display: inline-block;
+    cursor: default;
+    position: relative; /* Ensure dropdown is positioned relative to the parent */
+}
+#box ul {
+    padding: 0;
+    margin: 0;
+}
+#box ul, #box li, #box ul {
+    display: none; /* Ensure submenu is hidden by default */
+    position: absolute;
+    top: 30px; /* Adjust top value for correct positioning */
+    left: 0; /* Adjust left value for correct positioning */
+}
+#box:hover ul {
+    display: block; /* Show submenu when parent is hovered */
+}
+#box ul, #box li, #box ul, #box li:hover {
+    background-color: rgb(33, 144, 255);
+    color: white;
+}
+#box a {
+    color: black;
+    text-decoration: none;
 }
