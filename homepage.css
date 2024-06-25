@@ -80,8 +80,10 @@ body {
 
 .Title {
     text-align: center;
-    border: 2px solid black;
-    background-color:#ccc7bf 
+    top: 0;
+    left: 50%;
+    position: relative;
+    width: 100%;
 
 }
 
@@ -90,6 +92,7 @@ body {
     padding: 16px;
 }
 
+/*
 .maintable{
     width: 100%;
     margin-left: auto; 
@@ -108,38 +111,51 @@ body {
 }
 
 
+*/
 
-#box ul, #box ul li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: 30px;
-    line-height: 30px;
-    width: 100px;
-}
-#box {
+/* Title drop down CSS */
+
+.dropbtn {
+    background-color: #fdf9f3;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 370%;
+    text-align: center;
+    position: relative;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #dcd9d4;
+  }
+  
+  .dropdown {
+    position: relative;
     display: inline-block;
-    cursor: default;
-    position: relative; /* Ensure dropdown is positioned relative to the parent */
-}
-#box ul {
-    padding: 0;
-    margin: 0;
-}
-#box ul, #box li, #box ul {
-    display: none; /* Ensure submenu is hidden by default */
+  }
+  
+  .dropdown-content {
+    display: none;
     position: absolute;
-    top: 30px; /* Adjust top value for correct positioning */
-    left: 0; /* Adjust left value for correct positioning */
-}
-#box:hover ul {
-    display: block; /* Show submenu when parent is hovered */
-}
-#box ul, #box li, #box ul, #box li:hover {
-    background-color: rgb(33, 144, 255);
-    color: white;
-}
-#box a {
+    background-color: #f1f1f1;
+    width:370%;
+    text-align: center;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
     color: black;
+    padding: 12px 16px;
     text-decoration: none;
-}
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  
+  
