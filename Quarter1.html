@@ -60,6 +60,7 @@
         <th><h1>Risk</h1></th>
         <th><h1>Last Review</h1></th>
         <th><h1>Date Due</h1></th>
+        <th>Edit</th>
       </tr>
     </thead>
     
@@ -69,6 +70,16 @@
         <td>A</td>
         <td>Sigma</td>
         <td>6-9-69</td>
+        <td style="position: relative;">
+
+          <button onclick="InvPop()">Edit</button>
+            <div class="outer" style="clear: both;display: none;" id="InvPop">
+              <div class="inner">Foo foo
+                <button type="button" onclick="InvPopOp()"> X </button>
+              </div>
+            </div>
+
+        </td>
       </tr>
   
     </tbody>
@@ -76,7 +87,18 @@
   
   <button type="button" onclick="InsRow()" class="AddButt">+</button>
   <button onclick="myDeleteFunction()" class="DelButt">-</button>
+  <br><br><br>
 
+</section>
+
+<!-- Popup after clicking on investors list-->
+<section>
+
+
+  
+  
+
+  
 </section>
 
 
