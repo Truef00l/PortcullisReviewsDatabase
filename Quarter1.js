@@ -31,11 +31,28 @@ window.onclick = function(event) {
   }
 }
 
-function insrow() {
-  var table = document.getElementById("myTable");
-  var row = table.insertRow(0);
+// Table of investors
+
+function InsRow() {
+  var table = document.getElementById("container");
+  var row = table.insertRow(2);
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
-  cell1.innerHTML = "NEW CELL1";
-  cell2.innerHTML = "NEW CELL2";
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  cell1.innerHTML = "InvNew";
+  cell2.innerHTML = "A/B/C/D";
+  cell3.innerHTML = "Sigma";
+  cell4.innerHTML = "X-X-XX";
 }
+
+function myDeleteFunction() {
+  document.getElementById("container").deleteRow(2);
+}
+
+// trying some shit
+
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.container').width() - $('.container table').width();
+  $('.container').css({'padding-right':scrollWidth});
+}).resize();
