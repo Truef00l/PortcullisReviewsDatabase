@@ -74,8 +74,27 @@
 
           <button onclick="InvPop()">Edit</button>
             <div class="outer" style="clear: both;display: none;" id="InvPop">
-              <div class="inner">Foo foo
-                <button type="button" onclick="InvPopOp()"> X </button>
+              <div class="inner">
+
+                <form action="Quarter1.html" method="post">
+                  <label for="Investor Name"></label>
+                  <input type="text" id="Investor Name" placeholder="Investor Name" style="display: inline; float: left; width: auto;">
+                  <div class="Risklevel">
+                    <label for="Risk">Risk</label>
+                    <select>
+                      <option> Choose Risk Level </option>
+                      <option value="High"> High </option>
+                      <option value="High"> Medium </option>
+                      <option value="High"> Low </option>
+                    </select>
+                  </div>
+                  <br><br><br>
+                  <input type="submit" value="Submit" style="display: inline; float: left; width: auto;">
+                </form>
+
+
+
+                <button type="button" onclick="InvPopOp()" class="InvPopOp"> X </button>
               </div>
             </div>
 

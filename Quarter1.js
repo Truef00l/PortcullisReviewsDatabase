@@ -49,7 +49,7 @@ function InsRow() {
   
   `<button onclick="InvPop()">Edit</button>
     <div class="outer" style="clear: both;display: none;" id="InvPop">
-      <div class="inner">Foo foo
+      <div class="inner">Some Text!
         <button type="button" onclick="InvPopOp()"> X </button>
       </div>
     </div>
