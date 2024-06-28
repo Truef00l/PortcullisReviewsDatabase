@@ -59,18 +59,12 @@ function myDeleteFunction() {
   document.getElementById("container").deleteRow(2);
 }
 
-// trying some shit
-
-$(window).on("load resize ", function() {
-  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-  $('.tbl-header').css({'padding-right':scrollWidth});
-}).resize();
 
 // popup when investors list is clicked //
 
 function InsRow() {
   var table = document.getElementById("container");
-  var row = table.insertRow(2);
+  var row = table.insertRow(1);
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
@@ -81,10 +75,11 @@ function InsRow() {
   cell3.innerHTML = "X/X/XXXX";
   cell4.innerHTML = "X/X/XXXX";
   cell5.innerHTML = `
-    <button class="edit-btn">Edit</button>
+    <button class="edit-btn" onclick="editBtn()">Edit</button>
     <div class="outer" style="clear: both;display: none;">
       <div class="inner">
         <form class="InvTab">
+        <br>
           <input type="text" placeholder="Investor Name" style="display: inline; float: left; width: auto;">
           <div class="Risklevel">
             <label for="Risk">Risk</label>
@@ -94,11 +89,33 @@ function InsRow() {
               <option value="Medium">Medium</option>
               <option value="Low">Low</option>
             </select>
+            <br>
           </div>
-          <br><br><br>
-          <input type="submit" value="Submit" style="display: inline; float: left; width: auto;">
+          <br><br>
+          <div class="Contact_WhenDue_Lastreviewanddonebywho">
+            <!-- Contact + When Due + Last review and done by who -->
+              <br>
+              <label for="contactdetails" class="contactdetails"></label>
+              <input type="email" placeholder="Contact Details">
+              <br><br><br>
+              <label for="duedate" class="duedate"></label>
+              <input type="date" placeholder="dd/mm/yyyy">
+              <br><br><br>
+                <label for="lastreviewdate" class="lastreviewdate">Date of Last Review</label>
+                <input type="date" placeholder="dd/mm/yyyy">
+                <label for="personcompletedlastreview" class="personcompletedlastreview"> Completed by: </label>
+                <input type="text" placeholder="John Doe">
+                <br><br>
+          </div>
+          <br><br>
+          <button type="button" class="InvPopOp" onclick="closeBtn()" style="font-size=20px;">🔙</button>
+          <input type="submit" value="Submit" class="submitpopup">
+          
+
+
+          <br><br>
         </form>
-        <button type="button" class="InvPopOp">X</button>
+        <button class="delete-btn">Delete</button>
       </div>
     </div>
   `;
@@ -129,4 +146,3 @@ function attachRowEventListeners(row) {
     popup.style.display = "none";
   });
 }
-  

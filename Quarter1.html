@@ -38,7 +38,7 @@
           <a href="#quarter2">Quarter 2</a>
           <a href="#quarter3">Quarter 3</a>
           <a href="#quarter4">Quarter 4</a>
-          <a href="#homepage">Back to Homepage</a>
+          <a href="homepage.html">Back to Homepage</a>
         </div>
       </div>
     </div>
@@ -54,37 +54,7 @@
             <th>Edit Investor</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>John Doe</td>
-            <td>Medium</td>
-            <td>5/3/2012</td>
-            <td>7/10/2024</td>
-            <td style="position: relative;">
-              <button onclick="InvPop()">Edit</button>
-              <div class="outer" style="clear: both;display: none;" id="InvPop">
-                <div class="inner">
-                  <form action="#" method="post" class="InvTab">
-                    <label for="Investor Name"></label>
-                    <input type="text" id="Investor Name" placeholder="Investor Name" style="display: inline; float: left; width: auto;">
-                    <div class="Risklevel">
-                      <label for="Risk">Risk</label>
-                      <select>
-                        <option> Choose Risk Level </option>
-                        <option value="High"> High </option>
-                        <option value="Medium"> Medium </option>
-                        <option value="Low"> Low </option>
-                      </select>
-                    </div>
-                    <br><br><br>
-                    <input type="submit" value="Submit" style="display: inline; float: left; width: auto;">
-                  </form>
-                  <button type="button" onclick="InvPopOp()" class="InvPopOp"> X </button>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
+      
       </table>
       <button type="button" onclick="InsRow()" class="AddButt">+</button>
       <button onclick="myDeleteFunction()" class="DelButt">-</button>
@@ -92,3 +62,4 @@
     </section>
 </body>
 </html>
+

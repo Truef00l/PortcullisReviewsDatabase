@@ -282,15 +282,18 @@ body {
     margin-top: 20px;
     position: absolute;
     border: 2px solid white;
-    top: 40%;
+    top: 25%;
 }
 
 .InvPopOp {
     top: 50%;
-    right: -70%;
+    right: -85%;
     position: relative;
     display: inline;
     cursor: pointer;
+    font-size: 20px;
+    left: 0%;
+    
 }
 
 .outer {
@@ -309,4 +312,24 @@ body {
     display: inline;
     cursor: pointer;
     left: 55%;
+}
+
+.Contact_WhenDue_Lastreviewanddonebywho {
+  position: relative;
+  right: -7%;
+  border: 3px dotted black;
+  width: fit-content;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+.submitpopup {
+  display: inline; 
+  left: 35%;
+  position: relative;
+  font-size: 20px;
+  top: 50%;
+  width: 20%;
 }
