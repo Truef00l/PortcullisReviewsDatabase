@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="logincss.css">
+    <script defer src="loginpage.js"></script>
 </head>
 
 <body style="text-align: center;">
@@ -14,23 +15,27 @@
         <br><br>
             <!-- title -->
     
-        <form action="homepage.html" method="post">
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+        </div>
+
+        <form id="login-form">
             <div>
-                <label for="Username">Username:</label>
-                <input id="Username" type="text" placeholder="Enter your Username">
+                <!-- <label for="Username">Username:</label> -->
+                <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
                 <br><br>
                 <!-- Username input -->
             </div>
             
             <div>
-                <label for="Pw">Password:</label>
-                <input id="Pw" type="password" placeholder="Enter your Password">
+                <!-- <label for="Pw">Password:</label> -->
+                <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
                 <br><br>
                 <!-- Password Input -->
             </div>
             
             <div>
-                <input type="submit" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                <input type="submit" value="Login" id="login-form-submit">
                 <br><br>
                 <!-- Submit -->
             </div>

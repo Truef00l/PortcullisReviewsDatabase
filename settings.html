@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="settings.css">
+    <script src="settings.js"></script>
+</head>
+
+<body>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <br><br><br>
+      <hr>
+      <a href="#">Page 2 (Database)</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <br><br><br>
+      <a href="settings.html" class="settings">⚙️</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>  
+        <br><br>
+        <div class="dropdown-container">
+          <button onclick="toggleDropdown()" class="dropbtn">BACK</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="homepage.html" style="text-align: center;">Back to Home</a>
+            <a href="loginpage.html" style="text-align: center;">Back to Login</a>
+          </div>
+        </div>
+      </div>
+
+</body>
+
+<section id="maincontent">
+
+  <div id="main-holder">
+    <h1 id="login-header">Set Username and Password</h1>
+    <form id="set-credentials-form">
+        <input type="text" name="new-username" id="new-username-field" class="login-form-field" placeholder="New Username">
+        <p id="set-username-msg"></p>
+        <input type="password" name="new-password" id="new-password-field" class="login-form-field" placeholder="New Password">
+        <p id="set-password-msg"></p>
+        <input type="submit" value="Set Credentials" id="set-credentials-form-submit">
+    </form>
+  </div>
+
+</section>
