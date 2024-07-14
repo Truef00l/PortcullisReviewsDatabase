@@ -190,8 +190,8 @@ body {
 .container {
 	  text-align: left;
 	  overflow: hidden;
-	  width: 80%;
-	  margin: 0 auto;
+	  width: 100%;
+	  margin: 1 auto;
   display: table;
   padding: 0 0 8em 0;
 }
@@ -305,6 +305,7 @@ body {
     display: flex;
     justify-content: center;
     z-index: 1000; /* Ensure it covers other content */
+    
 }
 
 .Risklevel {
