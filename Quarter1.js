@@ -31,9 +31,9 @@ window.onclick = function(event) {
 }
 
 function myDeleteFunction() {
-  var table = document.getElementById("container").getElementsByTagName('tbody')[0];
+  var table = document.getElementById("container");
   var rowCount = table.rows.length;
-  if (rowCount > 0) { // Ensure there are rows to delete
+  if (rowCount > 1) { // Ensure there is at least one row besides the header
       table.deleteRow(rowCount - 1); // Delete the last row
   }
 }
@@ -42,8 +42,8 @@ function myDeleteFunction() {
 // popup when investors list is clicked //
 
 function InsRow() {
-  var table = document.getElementById("container");
-  var row = table.insertRow(-1);
+  var tableBody = document.getElementById("container").getElementsByTagName('tbody')[0];
+  var row = tableBody.insertRow(-1); // Insert row at the end
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
@@ -60,7 +60,7 @@ function InsRow() {
   `
       <button class="edit-btn">Edit</button>
       <div class="outer">
-          <div class="inner">
+          <div class="inner" style="justify-content:center">
               <form class="InvTab">
                   <br>
                   <input type="text" name="investorName" placeholder="Investor Name" style="display: inline; float: left; width: auto;">
@@ -78,7 +78,7 @@ function InsRow() {
                   <div class="Contact_WhenDue_Lastreviewanddonebywho">
                       <br>
                       <label for="contactdetails" class="contactdetails"></label>
-                      <input type="email" name="contactDetails" placeholder="Email Adress">
+                      <input type="email" name="contactDetails" placeholder="Contact Details">
                       <br><br><br>
                       <label for="duedate" class="duedate"></label>
                       <input type="date" name="dueDate" placeholder="dd/mm/yyyy">
@@ -97,8 +97,7 @@ function InsRow() {
               <button class="delete-btn">Delete</button>
           </div>
       </div>
-  `
-  ;
+  `;
   attachRowEventListeners(row);
 }
 
@@ -137,7 +136,8 @@ function updateRow(form, row) {
 
 function myDeleteFunction() {
   var table = document.getElementById("container");
-  if (table.rows.length > 1) {
-      table.deleteRow(1);
+  var rowCount = table.rows.length;
+  if (rowCount > 1) { // Ensure there is at least one row besides the header
+      table.deleteRow(rowCount - 1); // Delete the last row
   }
 }
