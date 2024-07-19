@@ -30,34 +30,25 @@ window.onclick = function(event) {
   }
 }
 
-function myDeleteFunction() {
-  var table = document.getElementById("container");
-  var rowCount = table.rows.length;
-  if (rowCount > 1) { // Ensure there is at least one row besides the header
-      table.deleteRow(rowCount - 1); // Delete the last row
-  }
-}
 
 
 // popup when investors list is clicked //
 
 function InsRow() {
   var tableBody = document.getElementById("container").getElementsByTagName('tbody')[0];
-  var row = tableBody.insertRow(-1); // Insert row at the end
+  var row = tableBody.insertRow(-1);
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
   var cell4 = row.insertCell(3);
   var cell5 = row.insertCell(4);
-  var cell6 = row.insertCell(5)
+  var cell6 = row.insertCell(5);
   cell1.innerHTML = "New Inv";
   cell2.innerHTML = "Undefined";
   cell3.innerHTML = "X/X/XXXX";
   cell4.innerHTML = "X/X/XXXX";
-  cell5.innerHTML = "example@domain.com"
-  cell6.innerHTML = 
-  
-  `
+  cell5.innerHTML = "example@domain.com";
+  cell6.innerHTML = `
       <button class="edit-btn">Edit</button>
       <div class="outer">
           <div class="inner" style="justify-content:center">
@@ -94,7 +85,7 @@ function InsRow() {
                   <input type="submit" value="Submit" class="submitpopup">
                   <br><br>
               </form>
-              <button class="delete-btn">Delete</button>
+              <button type="button" class="delete-btn">Delete</button>
           </div>
       </div>
   `;
@@ -105,6 +96,7 @@ function attachRowEventListeners(row) {
   var editBtn = row.querySelector('.edit-btn');
   var closeBtn = row.querySelector('.InvPopOp');
   var form = row.querySelector('.InvTab');
+  var deleteBtn = row.querySelector('.delete-btn');
 
   editBtn.addEventListener('click', function() {
       var popup = this.nextElementSibling;
@@ -122,6 +114,10 @@ function attachRowEventListeners(row) {
       updateRow(this, row);
       popup.style.display = "none";
   });
+
+  deleteBtn.addEventListener('click', function() {
+      deleteRow(row);
+  });
 }
 
 function updateRow(form, row) {
@@ -130,14 +126,17 @@ function updateRow(form, row) {
   row.cells[1].innerText = formData.get('riskLevel');
   row.cells[2].innerHTML = formData.get('lastReviewDate') + '<br>' + formData.get('completedBy');
   row.cells[3].innerText = formData.get('dueDate');
-  row.cells[4].innerText = formData.get('contactDetails')
+  row.cells[4].innerText = formData.get('contactDetails');
 }
 
+function deleteRow(row) {
+  row.parentNode.removeChild(row);
+}
 
 function myDeleteFunction() {
   var table = document.getElementById("container");
   var rowCount = table.rows.length;
-  if (rowCount > 1) { // Ensure there is at least one row besides the header
-      table.deleteRow(rowCount - 1); // Delete the last row
+  if (rowCount > 1) {
+      table.deleteRow(rowCount - 1);
   }
 }

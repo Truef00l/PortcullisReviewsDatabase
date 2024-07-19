@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homepage.css">
-    <script src="homepage.js"></script>
+    <link rel="stylesheet" href="Quarter1.css">
+    <script src="Quarter1.js"></script>
 </head>
-
 <body>
-
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <br><br><br>
       <hr>
-      <a href="#">Page 2 (Database)</a>
-      <hr>
       <a href="#">Page X</a>
       <hr>
       <a href="#">Page X</a>
@@ -29,32 +24,43 @@
       <a href="#">Page X</a>
       <hr>
       <br><br><br>
-      <a href="#" class="settings">⚙️</a>
+      <a href="settings.html" class="settings">⚙️</a>
     </div>
-    
     <div id="main">
       <button class="openbtn" onclick="openNav()">☰</button>  
       <br><br>
-      <div class="Title" style="text-align: center;">
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn"><h2>------- Quarter 2 -------</h2></button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#Quarter3.html">Quarter 3</a>
-            <a href="#Quarter4.html">Quarter 4</a>
-            <a href="Quarter1.html">Quarter 1</a>
-            <a href="homepage.html">Back to Homepage</a>
-            <!--   <a href="homepage.html">Back to Homepage</a>   -->
-          </div>
+      <div class="dropdown-container">
+        <button onclick="toggleDropdown()" class="dropbtn">Select Quarter</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="Quarter1.html">Quarter 1</a>
+          <a href="quarter3.html">Quarter 3</a>
+          <a href="quarter4.html">Quarter 4</a>
+          <a href="homepage.html">Back to Homepage</a>
         </div>
       </div>
     </div>
 
+    <section id="maincontent">
+      <table class="container" id="container">
+        <thead>
+          <tr>
+            <th><h1>Investor</h1></th>
+            <th><h1>Risk Level</h1></th>
+            <th><h1>Last Review Date</h1></th>
+            <th><h1>Date Due For Review</h1></th>
+            <th><h1>Investor Contact Details</h1></th>
+            <th>Edit Investor</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      
+      </table>
+      <button type="button" onclick="InsRow()" class="AddButt">+</button>
+      <button onclick="myDeleteFunction()" class="DelButt">-</button>
+      <br><br><br>
+    </section>
 </body>
-
-<section id="maincontent">
-
-
-</section>
-
-
+</html>
 
