@@ -153,6 +153,8 @@ function openNav() {
     const setCredentialsButton = document.getElementById("set-credentials-form-submit");
     const setUsernameMsg = document.getElementById("set-username-msg");
     const setPasswordMsg = document.getElementById("set-password-msg");
+    const setEmailMsg = document.getElementById("set-email-msg");
+
 
     if (setCredentialsButton) {
         setCredentialsButton.addEventListener("click", (e) => {
@@ -160,6 +162,7 @@ function openNav() {
             console.log("Set Credentials button clicked");
             const newUsername = setCredentialsForm["new-username"].value;
             const newPassword = setCredentialsForm["new-password"].value;
+            const newEmail = setCredentialsForm["new-email"].value;
 
             let valid = true;
 
@@ -183,12 +186,20 @@ function openNav() {
                 valid = false;
             }
 
-            /*if (valid) {
-                setUsernameMsg.textContent = "Username and password have been set successfully.";
-                setUsernameMsg.style.color = "green";
-                setPasswordMsg.textContent = "";
+            function validateEmail(newEmail) {
+              var re = /\S+@\S+\.\S+/;
+              return re.test(newEmail);
             }
-            */
+
+            if(validateEmail(newEmail)){
+              localStorage.setItem("email", newEmail);
+              setEmailMsg.textContent = "Email has been set successfully.";
+              setEmailMsg.style.color = "green";
+            } else{
+              setEmailMsg.textContent = "Please enter a valid email.";
+              setEmailMsg.style.color = "red";
+              valid = false;
+            }
         });
     } else {
         console.error("setCredentialsButton is null");
