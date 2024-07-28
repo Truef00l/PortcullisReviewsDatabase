@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'userandpassinput/Quarter1.css' %}">
+    <script src="{% static 'userandpassinput/Quarter1.js' %}"></script>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <br><br><br>
+      <hr>
+      <a href="Quarter1">Database</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <a href="#">Page X</a>
+      <hr>
+      <br><br><br>
+      <a href="settings" class="settings">⚙️</a>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>  
+      <br><br>
+      <div class="dropdown-container">
+        <button onclick="toggleDropdown()" class="dropbtn">Select Quarter</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="Quarter1">Quarter 1</a>
+          <a href="Quarter2">Quarter 2</a>
+          <a href="Quarter4">Quarter 4</a>
+          <a href="homepage">Back to Homepage</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="maincontent">
+      <table class="container" id="container">
+        <thead>
+          <tr>
+            <th><h1>Investor</h1></th>
+            <th><h1>Risk Level</h1></th>
+            <th><h1>Last Review Date</h1></th>
+            <th><h1>Date Due For Review</h1></th>
+            <th><h1>Investor Contact Details</h1></th>
+            <th>Edit Investor</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      
+      </table>
+      <button type="button" onclick="InsRow()" class="AddButt">+</button>
+      <button onclick="myDeleteFunction()" class="DelButt">-</button>
+      <br><br><br>
+    </section>
+</body>
+</html>
+

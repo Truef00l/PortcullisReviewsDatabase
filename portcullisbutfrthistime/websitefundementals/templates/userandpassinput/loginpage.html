@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'userandpassinput/logincss.css' %}">
+    <script defer src="{% static 'userandpassinput/loginpage.js' %}"></script>
+</head>
+
+<body style="text-align: center;">
+
+    <div class="bodysec">
+        <h1 style="font-weight: 400; font-size: xx-large; text-align: center;">Portcullis Risk Assessment Database</h1>
+        <br><br>
+            <!-- title -->
+    
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+        </div>
+
+        <form id="login-form">
+            <div>
+                <!-- <label for="Username">Username:</label> -->
+                <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+                <br><br>
+                <!-- Username input -->
+            </div>
+            
+            <div>
+                <!-- <label for="Pw">Password:</label> -->
+                <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+                <br><br>
+                <!-- Password Input -->
+            </div>
+            
+            <div>
+                <input type="submit" value="Login" id="login-form-submit">
+                <br><br>
+                <!-- Submit -->
+            </div>
+        </form>
+
+    </div>
+    
+
+    <img src="{% static 'userandpassinput/black.png' %}" class="coolcirle" alt="Circle Image">
+    <!-- topright circle-->
+
+    <img src="{% static 'userandpassinput/black.png' %}" class="coolcirle2" alt="Circle Image">
+    <!-- bottomleft circle-->
+ 
+
+</body>
+</html>
