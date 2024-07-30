@@ -1,16 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-from .Newsletter import add_to_subscriber_email_addresses
+from django.http import HttpResponse
+from django.template import loader
 
 # Create your views here.
-
-def print_some(request):
-    variable = request.GET.get('variable', 'default')
-    print('Variable:', variable)  # Log the variable for debugging purposes
-    # Call function to handle the variable and add it to a list
-    add_to_subscriber_email_addresses(variable)
-    return JsonResponse({'message': 'Received', 'variable': variable})
-
 def Test (request):
     return HttpResponse("Helloworld")
 
