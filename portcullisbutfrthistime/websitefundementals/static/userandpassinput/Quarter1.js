@@ -38,7 +38,7 @@ function saveTableDataToLocalStorage() {
     localStorage.setItem('tableData', JSON.stringify(tableData));
 }
 
-// load local storage
+// Load local storage
 function loadTableDataFromLocalStorage() {
     const storedData = localStorage.getItem('tableData');
     if (storedData) {
@@ -49,7 +49,7 @@ function loadTableDataFromLocalStorage() {
     }
 }
 
-// Add a row 
+// Add a row
 function addRow(rowData = {}) {
     var tableBody = document.getElementById("container").getElementsByTagName('tbody')[0];
     var row = tableBody.insertRow(-1);
@@ -63,6 +63,7 @@ function addRow(rowData = {}) {
     cell2.innerHTML = rowData.riskLevel || "Undefined";
     cell3.innerHTML = rowData.lastReviewDate ? rowData.lastReviewDate + '<br>' + (rowData.completedBy || "") : "MM/YYYY";
     cell4.innerHTML = rowData.dueDate || "MM/YYYY";
+    cell4.className = 'duedate';
     cell5.innerHTML = rowData.contactDetails || "example@domain.com";
     cell6.innerHTML = `
         <button class="edit-btn">Edit</button>
@@ -106,6 +107,14 @@ function addRow(rowData = {}) {
         </div>
     `;
     attachRowEventListeners(row);
+    getDuedateValues(); // Update the duedateofreview array after adding a new row
+}
+
+function getDuedateValues() {
+    const duedateElements = document.querySelectorAll('.duedate');
+    const duedateofreview = Array.from(duedateElements).map(element => element.innerText);
+    console.log(duedateofreview);
+    return duedateofreview;
 }
 
 function InsRow() {
@@ -155,6 +164,7 @@ function updateRow(form, row) {
     row.cells[1].innerText = formData.get('riskLevel');
     row.cells[2].innerHTML = formData.get('lastReviewDate') + '<br>' + formData.get('completedBy');
     row.cells[3].innerText = formData.get('dueDate');
+    row.cells[3].className = 'duedate';
     row.cells[4].innerText = formData.get('contactDetails');
 
     var rowIndex = row.rowIndex - 1;
@@ -167,6 +177,7 @@ function updateRow(form, row) {
         completedBy: formData.get('completedBy')
     };
     saveTableDataToLocalStorage();
+    getDuedateValues(); // Update the duedateofreview array after updating a row
 }
 
 function deleteRow(row) {
@@ -174,6 +185,7 @@ function deleteRow(row) {
     tableData.splice(rowIndex, 1);
     row.parentNode.removeChild(row);
     saveTableDataToLocalStorage();
+    getDuedateValues(); // Update the duedateofreview array after deleting a row
 }
 
 function myDeleteFunction() {
@@ -186,5 +198,7 @@ function myDeleteFunction() {
 }
 
 // Load data when the page loads
-window.onload = loadTableDataFromLocalStorage;
-
+window.onload = function() {
+    loadTableDataFromLocalStorage();
+    getDuedateValues(); // Call this function to initialize the duedateofreview array
+};
