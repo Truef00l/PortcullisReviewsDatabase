@@ -7,6 +7,7 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+/* sidebar code */
 .sidebar {
     height: 100%;
     width: 0;
@@ -64,12 +65,18 @@ body {
     color: rgb(0, 0, 0);
     padding: 5px 10px;
     border: none;
+    display: block;
+    margin:0 auto;
 }
 
 .openbtn:hover {
     background-color: #44444497;
     font-size: 25px;
 }
+
+----------------------------------------------------------------------------
+
+
 
 #main {
     transition: margin-left .5s;
@@ -90,59 +97,56 @@ body {
 #maincontent {
     transition: margin-left .5s;
     padding: 16px;
+    text-align: center;
 }
 
-/*
-.maintable{
-    width: 100%;
-    margin-left: auto; 
-    margin-right: auto;
-}
-
-.maintable, th, td {
-    border: 2px solid black;
-}
-
-.maintable th {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: larger;
-    background-color:#ccc7bf ;
-}
-
-
-*/
 
 /* Title drop down CSS */
 
-.dropbtn {
-    background-color: #fdf9f3;
-    color: rgb(0, 0, 0);
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Add this */
+  }
+  
+  .openbtn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  .dropbtn {
+    background-color: #C7B299;
+    color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    width: 370%;
-    text-align: center;
-    position: relative;
+    width: 700px; /* Adjust as needed */
   }
   
   .dropbtn:hover, .dropbtn:focus {
-    background-color: #dcd9d4;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
+    background-color: #A67C52;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    width:370%;
-    text-align: center;
-    overflow: auto;
+    min-width: 700px; /* Match button width */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -152,10 +156,20 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: center;
   }
   
-  .dropdown a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
   
-  .show {display: block;}
-  
-  
+  .show {
+    display: block;
+  }
+
+  .Homepage_text {
+    font-size: x-large;
+    color: #2a7b6d76;
+    text-shadow: #79ffe950;
+    
+  }

@@ -1,16 +1,13 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'userandpassinput/homepage.css' %}">
     <script src="{% static 'userandpassinput/homepage.js' %}"></script>
 </head>
-
 <body>
-
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <br><br><br>
@@ -27,104 +24,32 @@
       <hr>
       <a href="#">Page X</a>
       <hr>
-      <a href="#">Page X</a>
-      <hr>
       <br><br><br>
       <a href="settings" class="settings">⚙️</a>
     </div>
-    
     <div id="main">
       <button class="openbtn" onclick="openNav()">☰</button>  
       <br><br>
-      <div class="Title" style="text-align: center;">
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn"><h2>Potcullis Homepage</h2></button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="Quarter1">Quarter 1</a>
-            <a href="Quarter2">Quarter 2</a>
-            <a href="#Quarter3">Quarter 3</a>
-            <a href="#Quarter4">Quarter 4</a>
-            <!--   <a href="homepage">Back to Homepage</a>   -->
-          </div>
+      <div class="dropdown-container">
+        <button onclick="toggleDropdown()" class="dropbtn">Select Quarter</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="Quarter2">Quarter 2</a>
+          <a href="Quarter3">Quarter 3</a>
+          <a href="Quarter4">Quarter 4</a>
+          <a href="homepage">Back to Homepage</a>
         </div>
       </div>
     </div>
 
+    <section id="maincontent">
+      <span class="Homepage_text">
+        <h1>Successfully logged into secure portal
+          <br>
+          <br>
+          <br>
+        Welcome to portcullis risk assessment</h1>
+      </span>
+    </section>
 </body>
-
-<section id="maincontent">
-
-  <p> Add some sigma shit here </p>
-
-</section>
-
-
-
-
-
-
-<!-- REMOVE FOR NOW    
-    <table class="maintable">
-        <tr>
-          <th>Quarter 1</th>
-          <th>Quarter 2</th>
-        </tr>
-        <tr>
-          <td style="text-align: center;">
-
-            <br><br><br><br>
-            
-            <div>
-                <label for="Class A">Class A:</label>
-                <input id="Class A" type="text" placeholder="Enter name">
-            </div>
-            
-            <br><br>
-            
-            <div>
-                <label for="Class B">Class B:</label>
-                <input id="Class B" type="text" placeholder="Enter name">
-            </div>
-
-            <br><br><br><br>
-          </td>
-          
-
-          ----- Quarter 2 -----
-                <br><br>
-            <td style="text-align: center;">
-            
-              <br><br><br><br>
-            
-              <div>
-                  <label for="Class A">Class A:</label>
-                  <input id="Class A" type="text" placeholder="Enter name">
-              </div>
-                <label for="How often">Class A:</label>
-                <input id="How oftern" type="text" placeholder="Enter name">
-              <div>
-                  
-              </div>
-
-              <br><br>
-              
-              <div>
-                  <label for="Class B">Class B:</label>
-                  <input id="Class B" type="text" placeholder="Enter name">
-              </div>
-  
-              <br><br><br><br>
-            
-            </td>
-        </tr>
-        <tr id="newhead">
-            <th> Quarter 3</th>
-            <th> Quarter 4</th>
-        </tr>
-        <tr>
-            <td style="text-align: center;">XXX<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
-            <td style="text-align: center;">XXX<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
-        </tr>
-      </table>
-    -->
+</html>
 
