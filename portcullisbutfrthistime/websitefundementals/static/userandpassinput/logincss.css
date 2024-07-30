@@ -20,8 +20,8 @@ body, html {
 .coolcirle {
     position: absolute;
     top: 0px;
-    right: 0;
-    width: 260px;
+    right: -380px;
+    width: 150px;
     height: auto;
 }
 
@@ -29,8 +29,8 @@ body, html {
 .coolcirle2 {
     position: absolute;
     bottom: 0px;
-    left: 0;
-    width: 260px;
+    left: -380px;
+    width: 150px;
     height: auto;
 }
 

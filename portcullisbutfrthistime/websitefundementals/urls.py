@@ -11,6 +11,7 @@ urlpatterns = [
     path ("Quarter2", views.Quarter2, name = "Quarter2"),
     path ("Quarter3", views.Quarter3, name = "Quarter3"),
     path ("Quarter4", views.Quarter4, name = "Quarter4"),
-    path ("settings", views.settings, name = "settings")
+    path ("settings", views.settings, name = "settings"),
+    path('printsome/', views.print_some, name='print_some'),
 ]
     

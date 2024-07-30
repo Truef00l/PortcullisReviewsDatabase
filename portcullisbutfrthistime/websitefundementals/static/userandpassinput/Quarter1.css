@@ -7,7 +7,6 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-/* sidebar code */
 .sidebar {
     height: 100%;
     width: 0;
@@ -73,10 +72,6 @@ body {
     background-color: #44444497;
     font-size: 25px;
 }
-
-----------------------------------------------------------------------------
-
-
 
 #main {
     transition: margin-left .5s;
